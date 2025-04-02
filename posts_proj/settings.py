@@ -38,10 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # our own apps
-    'posts'
-    'profiles'
+    'posts',
+    'profiles',
     # 3rd part apps
-    'crispy_forms'
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -122,9 +122,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS =[
-    BASE_DIR /'static'
-    BASE_DIR /'posts' /'static'
-    BASE_DIR /'profiles' /'static'
+    BASE_DIR /'static',
+    BASE_DIR /'posts' /'static',
+    BASE_DIR /'profiles' /'static',
 ]
 
 MEDIA_URL= 'media/'
