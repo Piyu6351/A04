@@ -151,6 +151,7 @@ postForm.addEventListener('submit', e=>{
             const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
             modal.hide();
             handleAlerts('success', 'New post added!')
+            postForm.reset()
 
         },
         error: function(error){
