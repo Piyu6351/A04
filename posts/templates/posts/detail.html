@@ -23,8 +23,8 @@
                         {% csrf_token %}
                         {{form|crispy}}
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">close</button>
-                            <button type="submit" class="btn btn-success">Update</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">close</button>
+                        <button type="submit" class="btn btn-success">Update</button>
                         </div>
                     </form>
                 </div>
@@ -46,9 +46,8 @@
                 <div class="modal-footer">
                     <form id ="delete-form">
                         {% csrf_token %}
-                        
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">close</button>
-                            <button type="submit" class="btn btn-success">Delete</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">close</button>
+                        <button type="submit" class="btn btn-success">Delete</button>
                     </form>
                 </div>
             </div>
@@ -86,4 +85,15 @@
         <div class="spinner-border" role="status"></div>
     </div>
     <div class="mt-1" id="post-box"></div>
+    <hr>
+    <div class="d-flex align-items-center mt-3 mb-3">
+        {% if obj.author.avatar %}
+            <img src="{{ obj.author.avatar.url }}" alt="Profile Picture"
+                style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+        {% else %}
+            <img src="{% static 'images/default-profile.png' %}" alt="Default Profile Picture"
+                style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+        {% endif %}
+        <span>{{ obj.author.user.username }}</span>
+    </div>
 {% endblock content %}

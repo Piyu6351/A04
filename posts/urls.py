@@ -1,5 +1,4 @@
 from django.urls import path
-from django.views.generic.base import RedirectView
 from .views import (
     post_list_and_create,
     load_post_data_view,
@@ -14,7 +13,6 @@ from .views import (
 app_name = 'posts'
 
 urlpatterns =[
-    path('favicon.ico', RedirectView.as_view(url='/static/favicon.ico', permanent=False)),
     path('', post_list_and_create, name='main-board'),
     path('like-unlike/', like_unlike_post, name='like-unlike'),
     path('upload/', image_uplode_view, name='image-upload'),
