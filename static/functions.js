@@ -4,4 +4,7 @@ const handleAlerts = (type, msg) => {
             ${msg}
         </div>  
     `
+    setTimeout(() => {
+        alertBox.innerHTML = '';
+    }, 3000);
 }

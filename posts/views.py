@@ -127,3 +127,4 @@ def image_uplode_view(request):
         post = Post.objects.get(id=new_post_id)
         Photo.objects.create(image=img, post=post)
     return HttpResponse()
+    
